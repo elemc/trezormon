@@ -1,6 +1,6 @@
 Name:           trezormon
 Version:        0.10.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Trezor Monitoring System application
 
 License:        Proprietary
@@ -27,7 +27,7 @@ mkdir -p $RPM_BUILD_ROOT/opt/trezormon/docs
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 cp -r  %{_builddir}/%{name}-%{version}/frontend $RPM_BUILD_ROOT/opt/trezormon/
 cp -r  %{_builddir}/%{name}-%{version}/docs $RPM_BUILD_ROOT/opt/trezormon/
-ln -sf /opt/trezor/%{name}-%{version} $RPM_BUILD_ROOT/opt/trezormon/%{name}
+ln -sf /opt/trezormon/%{name}-%{version} $RPM_BUILD_ROOT/opt/trezormon/%{name}
 install -D -m 0755 %{_builddir}/%{name}-%{version}/%{name}-%{version} $RPM_BUILD_ROOT/opt/trezormon/%{name}-%{version}
 install -D -m 0644 %{_builddir}/%{name}-%{version}/%{name}.toml $RPM_BUILD_ROOT/opt/trezormon/%{name}.toml
 install -D -m 0644 %{_builddir}/%{name}-%{version}/%{name}.service $RPM_BUILD_ROOT%{_unitdir}/%{name}.service
@@ -48,5 +48,8 @@ exit 0
 %systemd_postun_with_restart %{name}.service
 
 %changelog
+* Wed Jan 10 2024 Alexei Panov <alexei@panov.email> - 0.10.0-2
+- fix in files
+
 * Wed Jan 10 2024 Alexei Panov <alexei@panov.email> - 0.10.0-1
 - initial build
