@@ -1,6 +1,6 @@
 Name:           trezormon
-Version:        0.10.0
-Release:        2%{?dist}
+Version:        0.12.0
+Release:        1%{?dist}
 Summary:        Trezor Monitoring System application
 
 License:        Proprietary
@@ -48,6 +48,9 @@ exit 0
 %systemd_postun_with_restart %{name}.service
 
 %changelog
+* Thu Apr 18 2024 Alexei Panov <alexei@panov.email> - 0.12.0-1
+- new release
+
 * Wed Jan 10 2024 Alexei Panov <alexei@panov.email> - 0.10.0-2
 - fix in files
 
