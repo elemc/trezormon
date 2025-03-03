@@ -7,7 +7,7 @@ License:        Proprietary
 URL:            http://trezorrussia.ru/
 Source0:        https://panov.email/%{name}-%{version}.tar.xz
 
-BuildArch:      x86_64
+#BuildArch:      x86_64
 
 BuildRequires:  systemd-rpm-macros 
 Requires:       postgresql-server
