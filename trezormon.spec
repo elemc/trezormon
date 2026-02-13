@@ -48,7 +48,7 @@ exit 0
 %systemd_postun_with_restart %{name}.service
 
 %changelog
-* Fri Feb 13 2025 Alexei Panov <alexei@panov.email> - 0.18.0
+* Fri Feb 13 2026 Alexei Panov <alexei@panov.email> - 0.18.0
 - new release
 
 * Mon Jul 28 2025 Alexei Panov <alexei@panov.email> - 0.17.3
