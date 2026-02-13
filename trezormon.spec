@@ -1,5 +1,5 @@
 Name:           trezormon
-Version:        0.17.3
+Version:        0.18.0
 Release:        1%{?dist}
 Summary:        Trezor Monitoring System application
 
@@ -48,6 +48,9 @@ exit 0
 %systemd_postun_with_restart %{name}.service
 
 %changelog
+* Fri Feb 13 2025 Alexei Panov <alexei@panov.email> - 0.18.0
+- new release
+
 * Mon Jul 28 2025 Alexei Panov <alexei@panov.email> - 0.17.3
 - new release
 
